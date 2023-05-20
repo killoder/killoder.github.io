@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+    background-color: #0f1526;
+    color: azure;
+    height: auto;
+    width: auto;
+    font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    background-color: #0f1526;
+    padding: 1em;
+}
+.hello {
+    text-decoration: none;
+    color: azure;
+    border: 1px solid #506199;
+    padding: 0.6em;
+    border-radius: 0.3em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.mail {
+    text-decoration: none;
+    color: azure;
+}
+
+.mail:hover::after {
+    content: "endribusiness20@gmail.com";
+    margin-left: 1em;
+}
+.dow {
+    height: 1em;
+    margin-right: 4px;
+}
+
+/* Profile Image */
+.profile {
+    max-width: 15.625em;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 2em;
+    box-shadow: 0px 0px 15px #364579;
+}
+.opac {
+    display: flex;
+    margin: auto;
+    opacity: 20%;
+}
+.red {
+    text-decoration: none;
+    font-size: larger;
+    color:#567bff;
+}
+
+/* Crossfade Effect */
+.cross img:last-child {
+    display: none;
+}
+
+.cross:hover img:first-child {
+    display: none;
+}
+
+.cross:hover img:last-child {
+    display: block;
+}
+
+/* Social Icons */
+.social:hover {
+    filter: brightness(10);
+}
+
+.social {
+    height: 1em;
+    margin: 0.1em;
+}
+
+/* Fade-in Animations */
+.fade-in-left {
+    animation: fadeInLeft 1.5s;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    animation: fadeInRight 1.7s;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 6em;
+}
+
+h2 {
+    font-size: 3em;
+    opacity: 70%;
+}
+
+/* Right Navigation */
+.right-nav {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.left-nav {
+    display: flex;
+    flex: 1;
+    gap: 0.5em;
+}
+
+
+/* About Me Section */
+.zmadho {
+    font-size: 1.625em;
+    color: #acc2ff;
+}
+
+.cv {
+    border: 1px solid #293455;
+    border-radius: 5px;
+    padding: 7px 10px;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25em;
+    margin: auto;
+    background-color: #202945;
+}
+
+/* Information Section */
+.informacion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+}
+
+.photo2 {
+    max-width: 8em;
+    height: auto;
+    margin-right: 1em;
+}
+
+.gif {
+    width: 45%;
+    margin: 1em;
+}
+
+.dowcv {
+    text-decoration: none;
+    color: azure;
+}
+
+.aboutme {
+    width: 80%;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    text-align: left;
+}
+
+.pho {
+    height: 7.5em;
+    margin-left: 1em;
+}
+
+.skillat {
+    letter-spacing: 0.05em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+}
+
+.vija {
+    width: 10em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.languages {
+    border: 1px solid #506199;
+    padding: 0.3em 0.6em;
+    border-radius: 0.3em;
+    text-transform: uppercase;
+}
+
+.lan {
+    font-size: 0.875em;
+    color: azure;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+
+    /* Adjust styles for tablets and smaller screens */
+    .profile {
+        height: 10em;
+    }
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .photo2 {
+        max-width: 6em;
+    }
+
+    .gif {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        width: auto;
+        height: auto;
+    }
+    /* Adjust styles for mobile devices */
+    .intro {
+        width: 15em;
+        height: 10em;
+    }
+    .profile {
+        height: 4em;
+    }
+    nav {
+        width: 15em;
+        justify-content: space-between;
+    }
+    .texx {
+        font-size: 0.3em;
+    }
+    .zmadho {
+        font-size: 0.3em;
+    }
+    strong {
+        font-size: 0.3em;
+    }
+    p {
+        font-size: 0.3em;
+    }
+    .soc {
+        height: 1em;
+        width: auto;
+    }
+    .left-nav {
+        padding: 1em;
+    }
+    .cv {
+        width: 1em;
+    }
+    .photo {
+        height: 20px;
+        width: auto;
+    }
+    .dowcv {
+        font-size: 0.5em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .fade-in-left{
+        font-size: 0.5em;
+    }
+    .fade-in-right{
+        font-size: 1em;
+    }
+
+    .aboutme {
+        flex-direction: column;
+    }
+
+    .pho {
+        margin-left: 1em;
+        height: 5em;
+    }
+
+    .photo2 {
+        display: none;
+    }
+    .dow {
+        height: 1em;
+        margin-right: 2px;
+    }
+    .gif {
+        width: 70%;
+    }
+}
