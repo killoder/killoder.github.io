@@ -25,7 +25,18 @@ nav {
     display: flex;
     align-items: center;
 }
-
+.hello:hover {
+    color: #0f1526;
+    background-color: #506199;
+}
+.cont {
+    display: flex;
+    align-items: center;
+}
+.mid {
+    margin: auto;
+    padding: 15px;
+}
 .mail {
     text-decoration: none;
     color: azure;
@@ -176,7 +187,7 @@ h2 {
 }
 
 .gif {
-    width: 45%;
+    width: 100%;
     margin: 1em;
 }
 
