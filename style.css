@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Inter";
-    src: url("/assets/Inter-Regular.494a9c88.ttf") format("truetype");
+    src: url("assets/Inter-Regular.494a9c88.ttf") format("truetype");
+
     font-weight: normal;
     font-style: normal;
 }
@@ -18,10 +19,9 @@ html {
 body {
     background-color: var(--bg-main);
     color: var(--text-color);
-    height: auto;
-    width: auto;
     font-family: "Inter", sans-serif;
 }
+
 
 /* Navigation */
 nav {
@@ -292,20 +292,16 @@ h2 {
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        width: auto;
-        height: auto;
-    }
     /* Adjust styles for mobile devices */
     .intro {
-        width: 15em;
-        height: 10em;
+        width: 100%;
+        height: auto;
     }
     .profile {
         height: 4em;
     }
     nav {
-        width: 15em;
+        width: 100%;
         justify-content: space-between;
     }
     .texx {
