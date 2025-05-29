@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Inter";
     src: url("assets/Inter-Regular.494a9c88.ttf") format("truetype");
+
     font-weight: normal;
     font-style: normal;
 }
@@ -20,6 +21,7 @@ body {
     color: var(--text-color);
     font-family: "Inter", sans-serif;
 }
+
 
 /* Navigation */
 nav {
