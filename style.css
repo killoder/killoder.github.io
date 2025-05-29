@@ -1,18 +1,36 @@
+@font-face {
+    font-family: "Inter";
+    src: url("assets/Inter-Regular.494a9c88.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --bg-main: #0f1526;
+    --bg-secondary: #202945;
+    --accent: #506199;
+    --text-color: azure;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Styles */
 body {
-    background-color: #0f1526;
-    color: azure;
-    height: auto;
-    width: auto;
-    font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    font-family: "Inter", sans-serif;
 }
 
 /* Navigation */
 nav {
     display: flex;
     flex: 2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
     justify-content: space-between;
-    background-color: #0f1526;
+    background-color: var(--bg-main);
     padding: 1em;
 }
 .hello {
@@ -31,15 +49,21 @@ nav {
 }
 .cont {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 .mid {
     margin: auto;
     padding: 15px;
+    background-color: var(--bg-secondary);
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
-.mail {
-    text-decoration: none;
-    color: azure;
+.mid:hover {
+    transform: translateY(-5px);
 }
 
 .mail:hover::after {
@@ -113,18 +137,26 @@ nav {
 .fade-in-right {
     animation: fadeInRight 1.7s;
 }
-
 @keyframes fadeInRight {
     0% {
         opacity: 0;
         transform: translateX(50px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-section.in-view {
+    opacity: 1;
+    transform: none;
+}
+
 
 /* Heading Styles */
 h1 {
@@ -185,17 +217,14 @@ h2 {
     height: auto;
     margin-right: 1em;
 }
-
 .gif {
     width: 100%;
     margin: 1em;
+    transition: transform 0.3s ease;
 }
-
-.dowcv {
-    text-decoration: none;
-    color: azure;
+.gif:hover {
+    transform: scale(1.05);
 }
-
 .aboutme {
     width: 80%;
     display: flex;
@@ -261,20 +290,16 @@ h2 {
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        width: auto;
-        height: auto;
-    }
     /* Adjust styles for mobile devices */
     .intro {
-        width: 15em;
-        height: 10em;
+        width: 100%;
+        height: auto;
     }
     .profile {
         height: 4em;
     }
     nav {
-        width: 15em;
+        width: 100%;
         justify-content: space-between;
     }
     .texx {
